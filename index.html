@@ -1,0 +1,219 @@
+<!--
+PelicanStudio - Static website (single-page)
+Files included below in the same document for convenience. Save them as two files:
+  1) index.html
+  2) styles.css
+
+Editable placeholders are clearly marked with "/* EDIT */" comments.
+This site is intentionally mature, minimal, and accessible. CSS is external (styles.css).
+-->
+
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PelicanStudio — Web, Design & DevOps</title>
+  <meta name="description" content="PelicanStudio: professional website builds, UI/UX & graphic design, hosting, relaunches, and DevOps services for small businesses and creators.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#f6f7fb">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+  <img src="logo.png" alt="PelicanStudio Logo" class="brand-mark" width="40" height="40">
+  <span class="brand-name">PelicanStudio</span>
+</a>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Websites, Design & DevOps — built thoughtfully.</h1>
+          <p class="lead">I help businesses and creators launch, relaunch, and maintain professional websites with clean UI/UX, reliable hosting, and practical DevOps practices.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">Request a Quote</a>
+            <a class="btn ghost" href="#portfolio">See Work</a>
+          </div>
+          <ul class="contact-inline">
+            <li>Email: <a href="mailto:pelicanstudio30@gmail.com">pelicanstudio30@gmail.com</a></li>
+            <li>Call/WhatsApp: <a href="tel:+2347064504755">+234 706 450 4755</a></li>
+            <li>WhatsApp only: <a href="https://wa.me/2347064764088" target="_blank" rel="noopener">+234 706 476 4088</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-aside">
+          <div class="card example-card">
+            <h3>Services at a glance</h3>
+            <ul>
+              <li>Website design & development (static, CMS, e‑commerce)</li>
+              <li>UI/UX and graphic design (logos, flyers, posters)</li>
+              <li>Hosting & DNS setup, secure deployments</li>
+              <li>Relaunches & migrations, performance tuning</li>
+              <li>CI/CD, Docker, monitoring — DevOps for reliability</li>
+            </ul>
+            <p class="muted">Transparent pricing & clear SLAs available on request.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">Comprehensive offerings tailored to small businesses and creators.</p>
+        <div class="grid services-grid">
+          <article class="service">
+            <h3>Website Builds</h3>
+            <p>Fast, accessible websites — from brochure sites to e-commerce. Clean markup, SEO basics, and responsive layouts.</p>
+          </article>
+
+          <article class="service">
+            <h3>UI / UX & Graphic Design</h3>
+            <p>Brand-first designs: logos, digital assets, flyers, and marketing collateral that feel professional and calm.</p>
+          </article>
+
+          <article class="service">
+            <h3>Hosting & Maintenance</h3>
+            <p>Managed hosting, backup, SSL, uptime monitoring and routine updates so your site stays secure and healthy.</p>
+          </article>
+
+          <article class="service">
+            <h3>Relaunch & Migration</h3>
+            <p>Audit, clean-up, and relaunch older sites with modern stacks and improved performance and accessibility.</p>
+          </article>
+
+          <article class="service">
+            <h3>DevOps & Automation</h3>
+            <p>CI/CD pipelines, Dockerization, infrastructure provisioning, and deployment automation for predictable releases.</p>
+          </article>
+
+          <article class="service">
+            <h3>Consulting & Training</h3>
+            <p>One-on-one or team training sessions to hand over knowledge or guide internal efforts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-sub">A few representative projects — replace these with real screenshots and descriptions.</p>
+        <div class="grid portfolio-grid">
+          <!-- Replace placeholder images and text with your real portfolio items -->
+          <figure class="portfolio-item">
+            <div class="thumb" aria-hidden="true">
+              <!-- graceful placeholder box -->
+              <svg viewBox="0 0 600 400" class="thumb-svg" preserveAspectRatio="none">
+                <rect width="600" height="400" rx="8" fill="#eef2f6"></rect>
+              </svg>
+            </div>
+            <figcaption>
+              <strong>Shopfront Relaunch</strong>
+              <p>Design refresh, performance tuning, and CI-driven deploys.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 600 400" class="thumb-svg" preserveAspectRatio="none"><rect width="600" height="400" rx="8" fill="#eef2f6"></rect></svg></div>
+            <figcaption>
+              <strong>Portfolio Site</strong>
+              <p>Personal brand site with responsive design and SEO basics.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <div class="thumb" aria-hidden="true"><svg viewBox="0 0 600 400" class="thumb-svg" preserveAspectRatio="none"><rect width="600" height="400" rx="8" fill="#eef2f6"></rect></svg></div>
+            <figcaption>
+              <strong>Flyer & Poster Series</strong>
+              <p>Printed marketing materials and digital versions for socials.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <h2 class="section-title">Process</h2>
+        <ol class="process-list">
+          <li><strong>Discovery</strong> — short call, requirements, and success metrics.</li>
+          <li><strong>Design</strong> — wireframes, mockups, and approval cycles.</li>
+          <li><strong>Build</strong> — development, testing, and staging deployment.</li>
+          <li><strong>Launch</strong> — final checks, DNS updates, and live deployment.</li>
+          <li><strong>Maintain</strong> — optional support retainer, backups, and monitoring.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Tell me about your project — quick assessments are free.</p>
+
+        <div class="contact-grid">
+          <form class="contact-form" action="mailto:pelicanstudio30@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send</button>
+              <a class="btn ghost" href="https://wa.me/2347064504755" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+          </form>
+
+          <aside class="contact-info">
+            <h3>Direct contact</h3>
+            <p>Email: <a href="mailto:pelicanstudio30@gmail.com">pelicanstudio30@gmail.com</a></p>
+            <p>Call / WhatsApp: <a href="tel:+2347064504755">+234 706 450 4755</a></p>
+            <p>WhatsApp only: <a href="https://wa.me/2347064764088" target="_blank" rel="noopener">+234 706 476 4088</a></p>
+
+            <h4>Quick notes</h4>
+            <ul>
+              <li>Free initial consultation — 15–30 minutes.</li>
+              <li>Clear scope & milestone-based pricing.</li>
+              <li>Privacy: client assets kept private; code repository access only if requested.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> PelicanStudio — Built with care. Email: <a href="mailto:pelicanstudio30@gmail.com">pelicanstudio30@gmail.com</a></p>
+      <nav class="mini-nav">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // simple UX niceties
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

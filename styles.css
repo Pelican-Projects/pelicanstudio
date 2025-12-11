@@ -1,0 +1,106 @@
+/* FILE: styles.css */
+/*
+Save this as styles.css in the same folder as index.html
+Palette and typography are deliberately muted and minimal.
+*/
+:root{
+  --bg:#fbfcfe;
+  --surface:#ffffff;
+  --muted:#6b7280;
+  --text:#0f1724;
+  --accent:#1f2937; /* deep neutral */
+  --primary:#0b5fff; /* used sparingly */
+  --radius:12px;
+  --max:1100px;
+  --gap:1.25rem;
+  font-size:16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text)}
+.brand-mark{color:var(--accent)}
+.brand-name{font-weight:700;letter-spacing:0.2px}
+.nav a{margin-left:1rem;text-decoration:none;color:var(--muted)}
+.nav a.cta{padding:.45rem .7rem;border-radius:9px;border:1px solid transparent}
+.nav a.cta:hover{border-color:#e6e9ef}
+
+/* Hero */
+.hero{padding:3.25rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 350px;gap:var(--gap);align-items:start}
+.hero-copy h1{margin:0 0 .6rem;font-size:2rem;font-weight:700}
+.lead{color:var(--muted);margin:0 0 1rem}
+.hero-cta{display:flex;gap:.6rem;margin-bottom:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none;border:1px solid transparent;font-weight:600}
+.btn.primary{background:var(--accent);color:white}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--accent)}
+.contact-inline{list-style:none;padding:0;margin:0;color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap}
+
+.card{background:var(--surface);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(17,24,39,0.06)}
+.example-card ul{margin:.5rem 0 0;padding-left:1rem;color:var(--muted)}
+
+/* Sections */
+.section{padding:2.25rem 0}
+.section.alt{background:linear-gradient(180deg,#fbfcfe,#f7f9fb)}
+.section-title{margin:0 0 .5rem;font-size:1.25rem}
+.section-sub{color:var(--muted);margin:0 0 1rem}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.service{background:var(--surface);padding:1rem;border-radius:10px;box-shadow:0 4px 12px rgba(15,23,36,0.03)}
+.service h3{margin:0 0 .5rem}
+
+/* Portfolio grid */
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.portfolio-item{background:transparent}
+.thumb{border-radius:8px;overflow:hidden;margin-bottom:.6rem}
+.thumb-svg{width:100%;height:auto;display:block}
+
+.process-list{padding-left:1rem}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1rem}
+.contact-form{background:var(--surface);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(17,24,39,0.04)}
+.contact-form label{display:block;margin-top:.6rem;font-weight:600;font-size:.9rem}
+.contact-form input,.contact-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e8eef6;margin-top:.35rem}
+.form-actions{display:flex;gap:.6rem;align-items:center;margin-top:.8rem}
+.contact-info{background:transparent;padding:0 0 .5rem}
+
+/* Footer */
+.site-footer{padding:1rem 0;background:transparent;border-top:1px solid rgba(15,23,36,0.04)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.muted{color:var(--muted);font-size:.95rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .services-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .brand-name{font-size:.98rem}
+  .hero-copy h1{font-size:1.5rem}
+}
+
+/* Accessibility tweaks */
+a:focus{outline:3px solid rgba(11,95,255,0.2);outline-offset:3px}
+button:focus,input:focus,textarea:focus{outline:2px solid rgba(11,95,255,0.12)}
+
+/* Editable notes */
+/* EDIT: Replace placeholder portfolio SVGs with real images. Add real testimonials under portfolio or process sections. */
+
+/* End of stylesheet */
