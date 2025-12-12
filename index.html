@@ -19,11 +19,13 @@
   <span class="brand-name">PelicanStudio</span>
 </a>
 
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#process">Process</a>
-        <a href="#contact" class="cta">Get a Quote</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact" class="cta">Get a Quote</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -32,7 +34,7 @@
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1>Web Development {Front-End Web Development (HTML & CSS) | Website Design/Website Building/Website Hosting | UI Development} | Graphic Design | DevOps |</h1>
+          <h1>Front-end Web Development — UI/UX & Graphic Design — DevOps</h1>
           <p class="lead">We Build Responsive Websites With HTML/CSS And Also Offer Secure Website Hosting And Domain Setup Service. We Also Help Businesses And Creators Launch, Relaunch, And Maintain Professional Websites With Clean UI/UX, Reliable Hosting, And Practical DevOps Practices.</p>
           <div class="hero-cta">
             <a class="btn primary" href="#contact">Request a Quote</a>
@@ -41,7 +43,7 @@
           <ul class="contact-inline">
             <li>Email: <a href="mailto:pelicanstudio30@gmail.com">pelicanstudio30@gmail.com</a></li>
             <li>Call/WhatsApp: <a href="tel:+2347064504755">+234 706 450 4755</a></li>
-            <li>WhatsApp only: <a href="https://wa.me/2347064764088" target="_blank" rel="noopener">+234 706 476 4088</a></li>
+            <li>WhatsApp only: <a href="https://wa.me/2347064764088" target="_blank" rel="noopener noreferrer">+234 706 476 4088</a></li>
           </ul>
         </div>
 
@@ -104,10 +106,19 @@
         <h2 class="section-title">Portfolio</h2>
         <p class="section-sub">Below is a graphical images of some of our work.</p>
         <div class="grid portfolio-grid">
-          <img src="portfolio/portfolio1.jpg" alt="Shopfront Relaunch">
+          <figure class="portfolio-item">
+            <div class="thumb">
+              <img src="portfolio/portfolio1.jpg" alt="Shopfront Relaunch" width="720" height="1475">
+            </div>
+            <figcaption>
+              <strong>Shopfront Relaunch</strong>
+              <p>Design refresh, performance tuning, and CI-driven deploys.</p>
+            </figcaption>
+          </figure>
+
           <figure class="portfolio-item">
             <div class="thumb" aria-hidden="true">
-          <img src="portfolio/portfolio2.jpg" alt="Shopfront Relaunch">
+              <img src="portfolio/portfolio2.jpg" alt="Shopfront Relaunch" width="720" height="1475">
               <svg viewBox="0 0 600 400" class="thumb-svg" preserveAspectRatio="none">
                 <rect width="600" height="400" rx="8" fill="#eef2f6"></rect>
               </svg>
@@ -120,7 +131,7 @@
 
           <figure class="portfolio-item">
             <div class="thumb">
-              <img src="portfolio/portfolio3.jpg" alt="Portfolio Site screenshot">
+              <img src="portfolio/portfolio3.jpg" alt="Portfolio Site screenshot" width="720" height="1887">
             </div>
             <figcaption>
               <strong>Portfolio Site</strong>
@@ -130,7 +141,7 @@
 
           <figure class="portfolio-item">
             <div class="thumb">
-              <img src="portfolio/portfolio4.jpg" alt="Flyer and poster design">
+              <img src="portfolio/portfolio4.jpg" alt="Flyer and poster design" width="720" height="2202">
             </div>            
             <figcaption>
               <strong>Flyer & Poster Series</strong>
@@ -160,7 +171,7 @@
         <p class="section-sub">Tell me about your project (quick assessments are free).</p>
 
         <div class="contact-grid">
-          <form class="contact-form" action="mailto:pelicanstudio30@gmail.com" method="post" enctype="text/plain">
+          <form id="contactForm" class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
             <label for="name">Full name</label>
             <input id="name" name="name" required>
 
@@ -172,15 +183,16 @@
 
             <div class="form-actions">
               <button class="btn primary" type="submit">Send</button>
-              <a class="btn ghost" href="https://wa.me/2347064504755" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              <a class="btn ghost" href="https://wa.me/2347064504755" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
             </div>
+            <div id="formStatus" aria-live="polite" class="form-status" style="margin-top:.5rem"></div>
           </form>
 
           <aside class="contact-info">
             <h3>Direct contact</h3>
             <p>Email: <a href="mailto:pelicanstudio30@gmail.com">pelicanstudio30@gmail.com</a></p>
             <p>Call / WhatsApp: <a href="tel:+2347064504755">+234 706 450 4755</a></p>
-            <p>WhatsApp only: <a href="https://wa.me/2347064764088" target="_blank" rel="noopener">+234 706 476 4088</a></p>
+            <p>WhatsApp only: <a href="https://wa.me/2347064764088" target="_blank" rel="noopener noreferrer">+234 706 476 4088</a></p>
 
             <h4>Quick notes</h4>
             <ul>
@@ -206,7 +218,43 @@
 
   <script>
     // simple UX niceties
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      var yEl = document.getElementById('year');
+      if (yEl) yEl.textContent = new Date().getFullYear();
+
+      // Contact form submission via Formspree (replace YOUR_FORM_ID)
+      var form = document.getElementById('contactForm');
+      var status = document.getElementById('formStatus');
+      if (form) {
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if (!form.action || form.action.indexOf('formspree.io') === -1) {
+            if (status) status.textContent = 'Please configure the form action with your Formspree endpoint.';
+            return;
+          }
+          var data = new FormData(form);
+          if (status) { status.textContent = 'Sending…'; }
+          fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(response){
+            if (response.ok) {
+              if (status) status.textContent = 'Thanks — your message was sent.';
+              form.reset();
+            } else {
+              response.json().then(function(r){
+                if (status) status.textContent = (r && r.error) ? r.error : 'There was a problem sending your message.';
+              }).catch(function(){
+                if (status) status.textContent = 'There was a problem sending your message.';
+              });
+            }
+          }).catch(function(){
+            if (status) status.textContent = 'Network error — please try again later.';
+          });
+        });
+      }
+    })();
   </script>
 </body>
 </html>
