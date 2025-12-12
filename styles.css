@@ -1,7 +1,7 @@
 :root{
   --bg:#3fdee4;
   --surface:#ffffff;
-  --muted:#6b7280;
+  --muted:#5e0808;
   --text:#0f1724;
   --accent:#1f2937;
   --primary:#0b5fff;
@@ -16,7 +16,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background-image: url('bgImage/BG1.png');
+  background-image: url('bgImage/B2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,8 +45,8 @@ body{
 .btn.ghost{background:transparent;border-color:transparent;color:var(--accent)}
 .contact-inline{list-style:none;padding:0;margin:0;color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap}
 
-.card{background:var(--surface);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(17,24,39,0.06)}
-.example-card ul{margin:.5rem 0 0;padding-left:1rem;color:var(--muted)}
+.card{background:#0000FF;padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(17,24,39,0.06)}
+.example-card ul{margin:.5rem 0 0;padding-left:1rem;color:var(--surface)}
 
 /* Sections */
 .section{padding:2.25rem 0}
